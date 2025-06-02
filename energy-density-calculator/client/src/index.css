@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 212 13% 97%; /* #f8fafc */
+  --foreground: 215 25% 10%; /* #0f172a */
+  --muted: 210 11% 96%; /* #f1f5f9 */
+  --muted-foreground: 215 16% 47%; /* #64748b */
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 25% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 10%;
+  --border: 214 13% 90%; /* #e2e8f0 */
+  --input: 214 13% 90%;
+  --primary: 217 91% 60%; /* #2563eb */
+  --primary-foreground: 210 100% 99%;
+  --secondary: 210 11% 96%;
+  --secondary-foreground: 215 25% 10%;
+  --accent: 210 11% 96%;
+  --accent-foreground: 215 25% 10%;
+  --destructive: 0 84% 60%; /* #ef4444 */
+  --destructive-foreground: 60 9% 98%;
+  --success: 142 76% 36%; /* #10b981 */
+  --success-foreground: 355 7% 97%;
+  --ring: 215 25% 10%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215 14% 65%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 213 31% 91%;
+  --card: 224 71% 4%;
+  --card-foreground: 213 31% 91%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 84% 5%;
+  --secondary: 222 84% 5%;
+  --secondary-foreground: 213 31% 91%;
+  --accent: 216 34% 17%;
+  --accent-foreground: 213 31% 91%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 213 31% 91%;
+  --success: 142 76% 36%;
+  --success-foreground: 355 7% 97%;
+  --ring: 216 34% 17%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  
+  .border-success {
+    border-color: hsl(var(--success));
+  }
+}
