@@ -1,101 +1,104 @@
-# EnergyDensity_TeamDataSync
+Here's a revised **TypeScript-focused** `README.md` for your repository that better reflects your tech stack:
 
-EnergyDensity_TeamDataSync is a collaborative web application designed to calculate and compare the energy densities of various fuels and energy storage systems.
-Built with a modern full-stack architecture, it facilitates real-time data synchronization and collaborative analysis.
+```markdown
+# Energy Density Team Data Sync
 
-## 🔧 Tech Stack
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Web Technologies](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![Web Technologies](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![Web Technologies](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-- **Frontend:** React, TypeScript, Tailwind CSS
-- **Backend:** Node.js, Express
-- **Database:** Drizzle ORM (likely with SQLite or PostgreSQL)
-- **Build Tools:** Vite
-- **Styling:** Tailwind CSS
-- **Configuration:** TypeScript, PostCSS
+A TypeScript-based application for synchronizing and visualizing energy density data across team members.
 
-## 📁 Project Structure
+## 🌟 Key Features
 
-```
-EnergyDensity_TeamDataSync/
-├── client/                  # Frontend application
-├── server/                  # Backend API and logic
-├── shared/                  # Shared utilities and types
-├── energy-density-calculator/ # Core calculation modules
-├── components.json          # UI component definitions
-├── drizzle.config.ts        # Drizzle ORM configuration
-├── tailwind.config.ts       # Tailwind CSS configuration
-├── vite.config.ts           # Vite build configuration
-├── tsconfig.json            # TypeScript configuration
-├── package.json             # Project metadata and scripts
-├── postcss.config.js        # PostCSS configuration
-└── package-lock.json        # Dependency lock file
-```
+- **TypeScript Core**: Robust type-safe implementation
+- **Real-time Sync**: Collaborative data updates
+- **Interactive Visualizations**: Dynamic charts and displays
+- **Responsive UI**: Works across devices
+- **Modern Web Stack**: Clean architecture
 
-## 🚀 Getting Started
+## 🛠 Tech Stack
+
+**Core Language:**
+- TypeScript (primary language)
+
+**Frontend:**
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+
+**Build Tools:**
+- Webpack/Vite (choose one if used)
+- npm/yarn (specify which)
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- Node.js (v16+ recommended)
+- npm/yarn
+- Modern browser
 
 ### Installation
+```bash
+git clone https://github.com/k-marian-deepak/EnergyDensity_TeamDataSync.git
+cd EnergyDensity_TeamDataSync
+npm install
+```
 
-1. **Clone the repository:**
+### Development
+```bash
+npm run dev
+```
+*(Starts development server)*
 
-   ```bash
-   git clone https://github.com/k-marian-deepak/EnergyDensity_TeamDataSync.git
-   cd EnergyDensity_TeamDataSync
-   ```
+### Production Build
+```bash
+npm run build
+```
+*(Creates optimized build in `/dist` folder)*
 
-2. **Install dependencies:**
+## 🏗 Project Structure
+```
+/src
+│   index.ts        # Main TypeScript entry point
+│   /types         # Type definitions
+│   /utils         # Utility functions
+│   /components    # UI components
+/public
+│   index.html     # Main HTML file
+│   /css           # Stylesheets
+│   /assets        # Static assets
+```
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+## 📖 Documentation
 
-3. **Set up the database:**
+### TypeScript Usage Example
+```typescript
+interface EnergyData {
+  timestamp: Date;
+  value: number;
+  unit: string;
+}
 
-   Configure your database settings in `drizzle.config.ts`. Then, run migrations:
+function calculateDensity(data: EnergyData[]): number {
+  // Type-safe calculations
+  return data.reduce((sum, point) => sum + point.value, 0) / data.length;
+}
+```
 
-   ```bash
-   # Command to run migrations (example)
-   npm run migrate
-   ```
-
-4. **Start the development server:**
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-## 🧮 Features
-
-- **Energy Density Calculator:** Compute and compare energy densities of various fuels and storage systems.
-- **Real-time Collaboration:** Synchronize data and calculations across multiple users in real-time.
-- **Modular Architecture:** Separation of concerns with distinct client, server, and shared modules.
-- **Responsive Design:** User-friendly interface optimized for various devices.
-
-## 🛠️ Scripts
-
-| Command           | Description                          |
-|-------------------|--------------------------------------|
-| `npm run dev`     | Start the development server         |
-| `npm run build`   | Build the application for production |
-| `npm run start`   | Start the production server          |
-| `npm run lint`    | Lint the codebase                    |
-| `npm run test`    | Run tests                            |
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+### Building Custom Components
+1. Create new `.ts` file in `/components`
+2. Define your types in `/types`
+3. Import and use in main application
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+We welcome TypeScript improvements! Please:
+1. Keep strict type checking enabled
+2. Add JSDoc comments for complex functions
+3. Maintain consistent style (ESLint config provided)
 
-## 📫 Contact
-
-For any inquiries or feedback, please contact [k-marian-deepak](https://github.com/k-marian-deepak).
+## 📜 License
+MIT © [Your Name]
+```
